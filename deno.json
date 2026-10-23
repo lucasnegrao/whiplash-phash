@@ -1,0 +1,13 @@
+{
+  "name": "whiplash-phash",
+  "exports": "./mod.ts",
+  "nodeModulesDir": "auto",
+  "imports": {
+    "sharp": "npm:sharp@0.35.5"
+  },
+  "tasks": {
+    "test": "deno test --allow-read --allow-env --allow-ffi --allow-sys",
+    "bench": "deno bench --allow-read --allow-env --allow-ffi --allow-sys",
+    "check": "deno fmt --check && deno lint && deno check *.ts"
+  }
+}
