@@ -1,8 +1,7 @@
 // deno-lint-ignore no-import-prefix -- Direct file imports do not inherit import maps.
 import sharp, { type SharpInput, type SharpOptions } from "npm:sharp@0.35.5";
+import { LOW_SIZE, SAMPLE_SIZE } from "./profile.ts";
 
-const SAMPLE_SIZE = 32;
-const LOW_SIZE = 8;
 const COS = new Float64Array(LOW_SIZE * SAMPLE_SIZE);
 
 for (let frequency = 1; frequency <= LOW_SIZE; frequency++) {
